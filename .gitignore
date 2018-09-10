@@ -3,6 +3,7 @@
 /.classpath
 /.settings/
 /target/**
+/src/main/xtend-gen/
 
 # Compiled class file
 *.class

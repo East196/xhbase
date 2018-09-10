@@ -1,0 +1,110 @@
+[
+  {
+    "name": "users",
+    "desc":"用户",
+    "rowKey":{
+      "splitter":"_",
+      "items":[
+          {
+              "name":"user",
+              "func":"hash"
+          },{
+              "name":"password",
+              "func":"hash"
+          }
+      ]
+    },
+    "cfs": [
+      {
+        "name": "info",
+        "cqs": [
+          {
+            "name": "user",
+            "type": "String",
+            "desc": "用户"
+          },
+          {
+            "name": "name",
+            "type": "String",
+            "desc": "姓名"
+          },
+          {
+            "name": "email",
+            "type": "String",
+            "desc": "电邮"
+          },
+          {
+            "name": "password",
+            "type": "String",
+            "desc": "密码"
+          },
+          {
+            "name": "tweetCount",
+            "type": "Long",
+            "desc": "推特数"
+          }
+        ]
+      }
+    ]
+  },  {
+    "name": "place",
+    "desc":"场景",
+    "rowKey":{
+      "splitter":"_",
+      "items":[
+          {
+              "name":"lat,lon",
+              "func":"geoHashBase32"
+          },{
+              "name":"uuid",
+              "func":""
+          }
+      ]
+    },
+    "cfs": [
+      {
+        "name": "uuid",
+        "cqs": [
+          {
+            "name": "uuid",
+            "type": "String",
+            "desc": "uuid"
+          }
+        ]
+      },      {
+        "name": "gps",
+        "cqs": [
+          {
+            "name": "lat",
+            "type": "Double",
+            "desc": "维度"
+          },
+          {
+            "name": "lon",
+            "type": "Double",
+            "desc": "经度"
+          },
+          {
+            "name": "distance",
+            "type": "Long",
+            "desc": "有效距离"
+          }
+        ]
+      },      {
+        "name": "tags",
+        "cqs": [
+          {
+            "name": "tag1",
+            "type": "String",
+            "desc": "一级分类"
+          },
+          {
+            "name": "tag2",
+            "type": "String",
+            "desc": "二级分类"
+          }
+        ]
+      }
+    ]
+  }
+]

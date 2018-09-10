@@ -1,0 +1,14 @@
+HBaseMeta
+
+1. users -- 用户	
+(0)新建指定表				hbase> create 'users', 'info'		
+(1)disable指定表			hbase> disable 'users'
+(2)添加aggregation 	hbase> alter 'users', METHOD => 'table_att','coprocessor'=>'|org.apache.hadoop.hbase.coprocessor.AggregateImplementation||'
+(3)重启指定表 				hbase> enable 'users'
+
+2. place -- 场景	
+(0)新建指定表				hbase> create 'place', 'uuid', 'gps', 'tags'		
+(1)disable指定表			hbase> disable 'place'
+(2)添加aggregation 	hbase> alter 'place', METHOD => 'table_att','coprocessor'=>'|org.apache.hadoop.hbase.coprocessor.AggregateImplementation||'
+(3)重启指定表 				hbase> enable 'place'
+

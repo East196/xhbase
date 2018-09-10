@@ -31,6 +31,11 @@
 			<artifactId>commons-lang3</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>io.fastjson</groupId>
+			<artifactId>boon</artifactId>
+			<version>0.34</version>
+		</dependency>
+		<dependency>
 			<groupId>jdk.tools</groupId>
 			<artifactId>jdk.tools</artifactId>
 			<version>1.8</version>
