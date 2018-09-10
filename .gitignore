@@ -1,8 +1,8 @@
 # eclipse files
-.classpath           # 所有目录下或者后缀是.classpath
-.project             # 所有目录下或者后缀是.project
-.settings/**         # 所有目录下或者后缀是.settings，以及.settings下所有文件
-target/**
+/.project
+/.classpath
+/.settings/
+/target/**
 
 # Compiled class file
 *.class
@@ -27,3 +27,5 @@ target/**
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+
